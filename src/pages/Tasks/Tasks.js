@@ -1,7 +1,7 @@
 import React from 'react';
-import Task from '../Home/TaskList/Task/Task';
+import Task from '../Task/Task';
 import { useSelector } from 'react-redux';
-import './Tasks.css';
+
 import { taskListSelector } from '../../redux/selectors/selector';
 
 export default function Tasks(props) {
@@ -9,7 +9,7 @@ export default function Tasks(props) {
 
   const arrTime = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
 
-  const taskList = useSelector(taskListSelector);
+  const { taskList } = useSelector(taskListSelector);
 
   const renderTime = () => {
     return arrTime.map((time, index) => {
@@ -21,29 +21,30 @@ export default function Tasks(props) {
     });
   };
 
+  const filterTaskList = (priority) => {
+    return taskList.filter((task) => {
+      return +task.date.day === resDate.date && task.priority === priority;
+    });
+  };
+
   const renderTaskPriority = (priority) => {
-    return taskList
-      .filter((task) => +task.date.day === resDate.date)
-      .filter((task) => task.priority === priority)
-      .map((task, index) => {
-        return (
-          <tr key={index} className="relative h-[50px] border-b-2">
-            <td>
-              <Task task={task} />
-            </td>
-          </tr>
-        );
-      });
+    return filterTaskList(priority).map((task) => {
+      return (
+        <tr key={task.id} className="relative h-[50px] border-b-2">
+          <td>
+            <Task task={task} />
+          </td>
+        </tr>
+      );
+    });
   };
 
   return (
     <table className="m-2 scrollTop">
-      <thead className="mb-2 bg-red-500">
+      <thead className="mb-2 bg-[#FF6D6D] text-white">
         <tr>{renderTime()}</tr>
       </thead>
       <tbody>
-        {/* {renderTaskPriority('')} */}
-
         {renderTaskPriority('High')}
         {renderTaskPriority('Medium')}
         {renderTaskPriority('Low')}

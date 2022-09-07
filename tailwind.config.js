@@ -215,6 +215,7 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
       none: 'none',
       header: '0px 4px 24px rgba(168, 168, 168, 0.25)',
+      task: 'drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));;',
     },
     boxShadowColor: ({ theme }) => theme('colors'),
     caretColor: ({ theme }) => theme('colors'),

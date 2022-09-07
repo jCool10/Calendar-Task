@@ -1,7 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 
-import { Reducer } from './reducers/Reducer';
+import { Reducers } from './reducers/Reducer';
 
-const rootReducer = combineReducers({ Reducer });
+const rootReducer = combineReducers({ Reducers });
 
 export const store = createStore(rootReducer);

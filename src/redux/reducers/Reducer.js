@@ -29,18 +29,9 @@ const initialState = {
       },
     },
   ],
-  // priority: {
-  //   All: true,
-  //   High: false,
-  //   Medium: false,
-  //   Low: false,
-  // },
-  filters: {
-    priority: [],
-  },
 };
 
-export const Reducer = (state = initialState, action) => {
+export const Reducers = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TASK_TYPE: {
       return {
@@ -55,7 +46,7 @@ export const Reducer = (state = initialState, action) => {
       if (index !== -1) {
         newTaskList[index].completed = !state.taskList[index].completed;
       }
-      console.log(newTaskList[index]);
+      // console.log(newTaskList[index]);
       state.taskList = newTaskList;
       return { ...state };
     }

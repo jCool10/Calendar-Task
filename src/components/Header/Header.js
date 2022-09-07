@@ -24,8 +24,6 @@ export default function Header() {
           <h1>{time.getMonth() + 1}</h1>
         </div>
       </div> */}
-
-      <div>123</div>
     </header>
   );
 }

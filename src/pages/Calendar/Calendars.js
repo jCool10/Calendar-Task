@@ -2,7 +2,7 @@ import './Calendar.css';
 import { Tabs } from 'antd';
 import React from 'react';
 import TaskList from '../TaskList/TaskList';
-import Tab from '../../Tab/Tab';
+import Tab from '../Tab/Tab';
 
 const { TabPane } = Tabs;
 

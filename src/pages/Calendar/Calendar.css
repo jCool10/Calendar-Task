@@ -6,12 +6,7 @@
   color: red !important;
 }
 .ant-tabs-tab:hover {
-  color: whitesmoke !important;
-}
-
-.ant-tabs {
-  /* box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25); */
-  /* border-radius: 35px; */
+  color: rgb(255, 151, 151) !important;
 }
 
 .ant-tabs-nav-list::-webkit-scrollbar {

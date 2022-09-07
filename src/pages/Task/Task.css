@@ -1,0 +1,14 @@
+.checkIcon {
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  color: rgb(220, 38, 38);
+  background: white;
+  font-weight: 800;
+  border-radius: 100%;
+}
+.checkIcon:hover,
+.checkIcon.active {
+  color: white;
+  background: rgb(220, 38, 38);
+}

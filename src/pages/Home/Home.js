@@ -1,5 +1,5 @@
 import React from 'react';
-import Calendar from './Calendar/Calendars';
+import Calendar from '../Calendar/Calendars';
 import PopupModal from '../Modal/Modal';
 
 export default function Home() {
