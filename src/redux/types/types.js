@@ -1,0 +1,4 @@
+export const ADD_TASK_TYPE = 'ADD_TASK_TYPE';
+export const CHECK_TASK_TYPE = 'CHECK_TASK_TYPE';
+
+export const FILTER_PRIORITY = 'FILTER_PRIORITY';
